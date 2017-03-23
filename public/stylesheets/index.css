@@ -1,12 +1,9 @@
 .outerWrapper {
   /*background-image: url('../images/together.jpg');*/
-  background-image: url("../images/cancun.jpg");
-  	/*background-image: url('../images/lights.png');
-  
-  	.backgroundOverlay
-  	{
-  		background-color: rgba(49, 48, 48, .35);
-  	}*/ }
+  /*background-image: url('../images/cancun.jpg');*/
+  background-image: url("../images/lights.png"); }
+  .outerWrapper .backgroundOverlay {
+    background-color: rgba(49, 48, 48, 0.35); }
 
 .home {
   position: relative;

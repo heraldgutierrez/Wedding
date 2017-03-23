@@ -1,0 +1,54 @@
+html
+	head
+		meta(charset="utf-8")
+		meta(name='author' content='Herald Gutierrez')
+		meta(name='keywords' content='HTML, CSS, JavaScript, jQuery, NodeJS, Jade, ExpressJS')
+		meta(http-equiv='content-type' content='text/html; charset=utf-8')
+		meta(name='description' content='Herald Gutierrez is a developer in Winnipeg, Manitoba')
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+
+		title Herald and Joanne | #{title}
+		
+		link(type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300")
+		link(type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin+Sans:400,100,300,400i,600,700,700i|Lato:400,100,300,400i,700,700i,900")
+		link(type="text/css" rel="stylesheet" href="/stylesheets/styles.css")
+		block styles
+		
+		//- script(type="text/javascript" async="" src="/scripts/Libs/angular-sanitize.js")
+		script(type="text/javascript" src="/scripts/Libs/angular.js")
+		script(type="text/javascript" src="/scripts/Libs/jquery.min.js")
+		script(type="text/javascript" src="/scripts/Libs/moment.min.js")
+		script(type="text/javascript" src="/scripts/wedding.js")			
+		script(type="text/javascript" src="/scripts/Services/Utility.js")
+		script(type="text/javascript" src="/scripts/Directives/countdown.js")
+		script(type="text/javascript" src="/scripts/Controllers/main-controller.js")
+		block scripts
+
+	body(ng-app='app' ng-controller='mainController as Main')
+		div.outerWrapper
+			div.backgroundOverlay
+
+			header
+				div.container
+					div.row
+						div.col-sm-12
+							nav.mobile-navigation
+								center
+									div#mobile-navigation-label(ng-click='Main.mobileMenuClick()')
+										span MENU
+									ul(ng-show='Main.showMobile')
+										li <a href="/">Home</a>
+										li <a href="/Wedding">Wedding</a>
+										li <a href="/Wedding-Social">Social</a>
+							nav.main-navigation
+								center
+									ul
+										li(class=title=='Home'?'active':undefined) <a href="/">Home</a>
+										li(class=title=='Wedding'?'active':undefined) <a href="/Wedding">Wedding</a>
+										li(class=title=='Wedding Social'?'active':undefined) <a href="/Wedding-Social">Social</a>
+
+			div.innerWrapper
+				div.container
+					block content
+

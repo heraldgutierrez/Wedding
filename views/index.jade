@@ -1,0 +1,29 @@
+extends layout
+
+block styles
+	link(rel='stylesheet', href='/stylesheets/index.css')
+	link(type="text/css" rel='stylesheet', href='/stylesheets/flipclock.css')
+
+block scripts
+	script(type="text/javascript" src="/scripts/Libs/flipclock.min.js")
+	script(type="text/javascript" src="/scripts/countdown.js")
+
+block content
+	div.home
+		div.col-sm-12
+			center
+				div.row
+					div.col-lg-6.col-lg-offset-3.col-md-8.col-md-offset-2.col-sm-12.col-xs-12
+						div.clock(style="margin:2em;")
+						div
+							center
+								h1.ido Until we say "I DO"
+			//- div.clockContainer
+			//- 	div.row
+			//- 		div.col-lg-6.col-lg-offset-3.col-md-8.col-md-offset-2.col-sm-12.col-xs-12
+			//- 			div.clock(style="margin:2em;")
+			//- 			div
+			//- 				center
+			//- 					h1.ido Until we say "I DO"
+
+		//- span(countdown='' date='January 1, 2017 12:00:00')

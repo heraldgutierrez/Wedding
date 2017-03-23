@@ -7,7 +7,7 @@ $(document).ready(function() {
 	var currentDateSeconds = currentDate.getTime() / 1000;
 
 	// Wedding Date: June 30, 2018
-	var futureDate  = new Date('6/30/2018 11:00 UTC-06:00');
+	var futureDate  = new Date('6/30/2018 11:00 UTC-05:00');
 	var futureDateSeconds = futureDate.getTime() / 1000;
 
 	// Calculate the difference in seconds between the future and current date

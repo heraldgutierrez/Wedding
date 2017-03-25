@@ -18,35 +18,19 @@ module.exports = (function() {
 	router.get('/Privacy-Policy', function(req, res) { res.render('privacy-policy', { title: 'Privacy Policy' }); });
 
 
-	router.get('/HJSayIDo', function(req, res, next) { 
-		var data = '';
-		var url = privateUrl + '' + jAT;
-		var request = https.get(url, function (response) {
-			response.on("data", function (chunk) {
-				data += chunk;
-			}); 
-
-			response.on("end", function (err) {
-				var imagesJSON = JSON.parse(data);
-				var images = [];
-				for(var i = 0; i < imagesJSON.data.length; i++) {
-					if (imagesJSON.data[i].type == 'image') {
-						images.push({
-							source: imagesJSON.data[i].images.low_resolution.url,
-							profileUrl: imagesJSON.data[i].link,
-							time: imagesJSON.data[i].created_time
-						});
-					}
-				}
-
-				getHPrivatePhotots(req, res, images);
-			}); 
-		}); 
+	router.get('/HJSayIDo', function(req, res) { 
+		var privateImages = [];
+		getPrivatePhotos(req, res, privateImages, false);
 	});
 
-	function getHPrivatePhotots(req, res, privateImages) {
+	function getPrivatePhotos(req, res, privateImages, isSecondCall) {
 		var data = '';
-		var url = privateUrl + '' + hAT;
+		var url = privateUrl + '' + jAT;
+
+		if (isSecondCall == true) {
+			url = privateUrl + '' + hAT;
+		}
+
 		var request = https.get(url, function (response) {
 			response.on("data", function (chunk) {
 				data += chunk;
@@ -64,14 +48,25 @@ module.exports = (function() {
 					}
 				}
 
-				getPublicImages(req, res, privateImages);				
+				if (isSecondCall == false) {
+					getPrivatePhotos(req, res, privateImages, true);
+				} else {
+					var publicImages = [];
+					getPublicImages(req, res, privateImages, publicImages, '');
+				}
 			}); 
 		}); 
 	}
 
-	function getPublicImages(req, res, privateImages) {
+	function getPublicImages(req, res, privateImages, publicImages, endCursor) {
 		var data = '';
-		var request = https.get(publicUrl, function (response) {
+		var url = publicUrl;
+
+		if (endCursor != '') {
+			url += '&max_id=' + endCursor;
+		}
+
+		var request = https.get(url, function (response) {
 			response.on("data", function (chunk) {
 				data += chunk;
 			}); 
@@ -80,47 +75,10 @@ module.exports = (function() {
 				var imagesJSON = JSON.parse(data);
 				var media = imagesJSON.tag.media.nodes;
 				var pageInfo = imagesJSON.tag.media.page_info;
-				var images = [];
 
 				for(var i = 0; i < media.length; i++) {
 					// ignore the 1 image that already uses the hashtag
-					if (media[i].code != 'uItDhXIyDK') {
-						images.push({
-							source: media[i].display_src,
-							profileUrl: 'https://www.instagram.com/p/' + media[i].code,
-							time: media[i].date
-						});
-					}
-				}
-
-				if (pageInfo.has_next_page == true) {
-					getMorePublicImages(req, res, privateImages, images, pageInfo.end_cursor);
-				} else {
-					res.render('hjsayido', { 
-						title: '#HJSayIDo',
-						privateImages: JSON.stringify(privateImages),
-						publicImages: JSON.stringify(images)
-					}); 
-				}
-			}); 
-		}); 
-	}
-
-	function getMorePublicImages(req, res, privateImages, publicImages, endCursor) {
-		var data = '';
-		var request = https.get(publicUrl + '&max_id=' + endCursor, function (response) {
-			response.on("data", function (chunk) {
-				data += chunk;
-			}); 
-
-			response.on("end", function (err) {
-				var imagesJSON = JSON.parse(data);
-				var media = imagesJSON.tag.media.nodes;
-				var pageInfo = imagesJSON.tag.media.page_info;
-				var images = [];
-
-				for(var i = 0; i < media.length; i++) {
-					if (publicImages.length < 50) {
+					if (media[i].code != 'uItDhXIyDK' && publicImages.length < 50) {
 						publicImages.push({
 							source: media[i].display_src,
 							profileUrl: 'https://www.instagram.com/p/' + media[i].code,
@@ -130,13 +88,9 @@ module.exports = (function() {
 				}
 
 				if (pageInfo.has_next_page == true && publicImages.length < 50) {
-					getMorePublicImages(req, res, privateImages, publicImages, pageInfo.end_cursor);
+					getPublicImages(req, res, privateImages, publicImages, pageInfo.end_cursor);
 				} else {
-					res.render('hjsayido', { 
-						title: '#HJSayIDo',
-						privateImages: JSON.stringify(privateImages),
-						publicImages: JSON.stringify(publicImages)
-					}); 
+					displayHJSayIDo(req, res, privateImages, publicImages);
 				}
 			}); 
 		}); 
@@ -145,8 +99,8 @@ module.exports = (function() {
 	function displayHJSayIDo(req, res, privateImages, publicImages) {
 		res.render('hjsayido', { 
 			title: '#HJSayIDo',
-			privateImages: privateImages,
-			publicImages: publicImages
+			privateImages: JSON.stringify(privateImages),
+			publicImages: JSON.stringify(publicImages)
 		}); 
 	}
 

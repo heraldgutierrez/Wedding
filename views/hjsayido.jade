@@ -17,12 +17,12 @@ block content
 			h1 Tag your Instagram photos with #HJSayIDo. Only public photos can be displayed.
 
 			div.brideAndGroom
-				h1 From the Bride and Groom
+				h1 Recently from the Bride and Groom
 				div.instgram-image(ng-repeat='image in IG.brideAndGroom | orderBy: "-time" | limitTo: 25')
 					a(href='{{ image.profileUrl }}' target='_blank') 
 						img(src='{{ image.source }}')
 			div.guests(ng-show='IG.instagramImages.length > 0')
-				h1 From the Guests
+				h1 Recently from the Guests
 				div.instgram-image(ng-repeat='image in IG.instagramImages | orderBy: "-time"')
 					a(href='{{ image.profileUrl }}' target='_blank') 
 						img(src='{{ image.source }}')

@@ -1,0 +1,23 @@
+.outerWrapper {
+  background-image: url("../images/together.png"); }
+
+.instgram-image, img {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 5px; }
+
+h1 {
+  font-size: 24px; }
+
+.brideAndGroom, .guests {
+  padding-top: 20px; }
+  .brideAndGroom h1, .guests h1 {
+    font-size: 30px;
+    margin: 0; }
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .instgram-image, img {
+    width: 150px;
+    height: 150px; } }

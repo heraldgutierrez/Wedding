@@ -8,9 +8,6 @@ var favicon = require('serve-favicon');
 var app = express();
 var server = http.createServer(app);
 
-// Sass
-//var sass = require('node-sass-middleware');
-
 // Routes
 var routes = require('./routes');
 
@@ -23,10 +20,6 @@ app.set('view options', { layout: 'layout.jade' });
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(favicon(path.join(__dirname,'public/images/favicon.ico')));
-// app.use(express.methodOverride());
-// app.use(express.cookieParser('your secret here'));
-// app.use(express.session());
-// app.use(app.router);
 
 app.use('/', routes);
 

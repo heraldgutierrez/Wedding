@@ -15,10 +15,8 @@ html
 		link(type="text/css" rel="stylesheet" href="/stylesheets/styles.css")
 		block styles
 		
-		//- script(type="text/javascript" async="" src="/scripts/Libs/angular-sanitize.js")
 		script(type="text/javascript" src="/scripts/Libs/angular.js")
 		script(type="text/javascript" src="/scripts/Libs/jquery.min.js")
-		script(type="text/javascript" src="/scripts/Libs/moment.min.js")
 		script(type="text/javascript" src="/scripts/wedding.js")			
 		script(type="text/javascript" src="/scripts/Services/Utility.js")
 		script(type="text/javascript" src="/scripts/Directives/countdown.js")
@@ -27,7 +25,7 @@ html
 
 	body(ng-app='app' ng-controller='mainController as Main')
 		div.outerWrapper
-			div.backgroundOverlay
+			//- div.backgroundOverlay
 
 			header
 				div.container
@@ -41,14 +39,14 @@ html
 										li <a href="/">Home</a>
 										li <a href="/Wedding">Wedding</a>
 										li <a href="/Wedding-Social">Social</a>
+										li <a href="/HJSayIDo">#HJSayIDo</a>
 							nav.main-navigation
 								center
 									ul
 										li(class=title=='Home'?'active':undefined) <a href="/">Home</a>
 										li(class=title=='Wedding'?'active':undefined) <a href="/Wedding">Wedding</a>
 										li(class=title=='Wedding Social'?'active':undefined) <a href="/Wedding-Social">Social</a>
-
+										li(class=title=='#HJSayIDo'?'active':undefined) <a href="/HJSayIDo">#HJSayIDo</a>
 			div.innerWrapper
 				div.container
 					block content
-

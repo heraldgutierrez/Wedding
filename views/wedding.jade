@@ -3,4 +3,11 @@ extends layout
 block styles
 	link(rel='stylesheet', href='/stylesheets/wedding.css')
 
+block scripts
+	//- script(type="text/javascript" src="/scripts/test.js")
+	script(type="text/javascript" src="/scripts/Controllers/instagram.js")
+
 block content
+	//- div#instafeed
+	//- div(ng-controller='instagramController as IG')
+	//- 	pre {{ IG.data }}

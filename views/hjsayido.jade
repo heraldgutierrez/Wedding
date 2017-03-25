@@ -1,0 +1,28 @@
+extends layout
+
+block styles
+	link(rel='stylesheet', href='/stylesheets/hjsayido.css')
+
+block scripts
+	script(type="text/javascript" src="/scripts/Controllers/instagram.js")
+	script.
+		app.constant('Constants', {
+			'privateImages': !{privateImages},
+			'publicImages': !{publicImages}
+		});
+
+block content
+	div(ng-controller='instagramController as IG')
+		center
+			h1 Tag your Instagram photos with #HJSayIDo. Only public photos can be displayed.
+
+			div.brideAndGroom
+				h1 From the Bride and Groom
+				div.instgram-image(ng-repeat='image in IG.brideAndGroom | orderBy: "-time" | limitTo: 25')
+					a(href='{{ image.profileUrl }}' target='_blank') 
+						img(src='{{ image.source }}')
+			div.guests
+				h1 From the Guests
+				div.instgram-image(ng-repeat='image in IG.instagramImages | orderBy: "-time"')
+					a(href='{{ image.profileUrl }}' target='_blank') 
+						img(src='{{ image.source }}')

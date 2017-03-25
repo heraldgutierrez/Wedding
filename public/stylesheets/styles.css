@@ -6971,8 +6971,7 @@ html, body {
   font-size: 20px; }
 
 body {
-  color: white;
-  /*color: rgba(247, 247, 247, 0.65);*/ }
+  color: white; }
 
 .mobile-navigation {
   display: none; }
@@ -6988,7 +6987,8 @@ body {
   min-width: 100%;
   width: 100%;
   height: 100%;
-  z-index: 1; }
+  z-index: 1;
+  overflow-y: scroll; }
   .outerWrapper .backgroundOverlay {
     background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
@@ -7026,7 +7026,7 @@ header {
         padding: 1em 1em 0;
         margin: 0; }
   header nav.main-navigation ul li {
-    font-size: 30px;
+    font-size: 25px;
     display: inline-block; }
   header nav.mobile-navigation ul li {
     font-size: 20px; }
@@ -7046,11 +7046,7 @@ a:hover, li.active a {
   color: #969696; }
 
 .innerWrapper {
-  height: 100%;
-  margin-top: -105px;
-  padding-top: 105px; }
-  .innerWrapper .container {
-    height: 100%; }
+  padding-bottom: 105px; }
 
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {

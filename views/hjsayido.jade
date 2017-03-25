@@ -21,7 +21,7 @@ block content
 				div.instgram-image(ng-repeat='image in IG.brideAndGroom | orderBy: "-time" | limitTo: 25')
 					a(href='{{ image.profileUrl }}' target='_blank') 
 						img(src='{{ image.source }}')
-			div.guests
+			div.guests(ng-show='IG.instagramImages.length > 0')
 				h1 From the Guests
 				div.instgram-image(ng-repeat='image in IG.instagramImages | orderBy: "-time"')
 					a(href='{{ image.profileUrl }}' target='_blank') 

@@ -83,11 +83,14 @@ module.exports = (function() {
 				var images = [];
 
 				for(var i = 0; i < media.length; i++) {
-					images.push({
-						source: media[i].display_src,
-						profileUrl: 'https://www.instagram.com/p/' + media[i].code,
-						time: media[i].date
-					});
+					// ignore the 1 image that already uses the hashtag
+					if (media[i].code != 'uItDhXIyDK') {
+						images.push({
+							source: media[i].display_src,
+							profileUrl: 'https://www.instagram.com/p/' + media[i].code,
+							time: media[i].date
+						});
+					}
 				}
 
 				if (pageInfo.has_next_page == true) {

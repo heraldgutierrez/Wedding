@@ -7,14 +7,17 @@
   height: 200px;
   margin: 5px; }
 
-h1 {
-  font-size: 24px; }
-
-.brideAndGroom, .guests {
+.instgram-container {
   padding-top: 20px; }
-  .brideAndGroom h1, .guests h1 {
+  .instgram-container h1 {
     font-size: 30px;
     margin: 0; }
+  .instgram-container h2 {
+    font-size: 20px;
+    margin: 0; }
+
+.guests {
+  padding-top: 40px; }
 
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {

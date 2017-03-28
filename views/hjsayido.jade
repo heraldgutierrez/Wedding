@@ -1,9 +1,11 @@
 extends layout
 
 block styles
-	link(rel='stylesheet', href='/stylesheets/hjsayido.css')
+	link(rel='stylesheet' href='/stylesheets/hjsayido.css')
+	link(rel="stylesheet" href='/stylesheets/jquery.fancybox.min.css')
 
 block scripts
+	script(type="text/javascript" src="/scripts/Libs/jquery.fancybox.min.js")
 	script(type="text/javascript" src="/scripts/Controllers/instagram.js")
 	script.
 		app.constant('Constants', {
@@ -14,15 +16,15 @@ block scripts
 block content
 	div(ng-controller='instagramController as IG')
 		center
-			h1 Tag your Instagram photos with #HJSayIDo. Only public photos can be displayed.
-
-			div.brideAndGroom
+			div.instgram-container
 				h1 Recently from the Bride and Groom
-				div.instgram-image(ng-repeat='image in IG.brideAndGroom | orderBy: "-time" | limitTo: 25')
-					a(href='{{ image.profileUrl }}' target='_blank') 
+				div.instgram-image(ng-repeat='image in IG.brideAndGroom | orderBy: "-time" | limitTo: 15')
+					a(data-fancybox href="{{ image.instagramUrl }}" data-caption='<center><a href="https://www.instagram.com/{{ image.username }}" target="_blank">@{{ image.username }}</a>: {{ image.caption }}</center>')
 						img(src='{{ image.source }}')
-			div.guests(ng-show='IG.instagramImages.length > 0')
-				h1 Recently from the Guests
+
+			div.instgram-container.guests(ng-show='IG.instagramImages.length > 0')
+				h1 Recently from the Guests using #HJSayIDo
+				h2 Tag your Instagram photos with #HJSayIDo. Only public photos can be displayed.
 				div.instgram-image(ng-repeat='image in IG.instagramImages | orderBy: "-time"')
-					a(href='{{ image.profileUrl }}' target='_blank') 
+					a(data-fancybox href="{{ image.instagramUrl }}" data-caption="<center>{{ image.caption }}</center>")
 						img(src='{{ image.source }}')

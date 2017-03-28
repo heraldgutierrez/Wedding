@@ -3,7 +3,8 @@ var https = require("https");
 
 // var tag = 'OurTravellingBAG';
 var tag = 'HJSayIDo';
-var privateUrl = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?access_token=';
+// var privateUrl = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?access_token=';
+var privateUrl = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=';
 var publicUrl = 'https://www.instagram.com/explore/tags/' + tag + '/?__a=1';
 var hAT = '7207370.a0915d4.d9afd67d4163473d97adf25e916f76f7';
 var jAT = '26413495.a0915d4.6e934975128b4a01a99774aba145e10a';
@@ -16,7 +17,6 @@ module.exports = (function() {
 	router.get('/Wedding', function(req, res) { res.render('wedding', { title: 'Wedding' }); });
 	router.get('/Wedding-Social', function(req, res) { res.render('wedding-social', { title: 'Wedding Social' }); });
 	router.get('/Privacy-Policy', function(req, res) { res.render('privacy-policy', { title: 'Privacy Policy' }); });
-
 
 	router.get('/HJSayIDo', function(req, res) { 
 		var privateImages = [];
@@ -38,11 +38,21 @@ module.exports = (function() {
 
 			response.on("end", function (err) {
 				var imagesJSON = JSON.parse(data);
+				var caption;
+
 				for(var i = 0; i < imagesJSON.data.length; i++) {
 					if (imagesJSON.data[i].type == 'image') {
+						if (imagesJSON.data[i].caption) {
+							caption = imagesJSON.data[i].caption.text;
+						} else {
+							caption = '';
+						}
+
 						privateImages.push({
 							source: imagesJSON.data[i].images.low_resolution.url,
-							profileUrl: imagesJSON.data[i].link,
+							instagramUrl: imagesJSON.data[i].link,
+							username: imagesJSON.data[i].user.username,
+							caption: caption,
 							time: imagesJSON.data[i].created_time
 						});
 					}
@@ -81,7 +91,8 @@ module.exports = (function() {
 					if (media[i].code != 'uItDhXIyDK' && publicImages.length < 50) {
 						publicImages.push({
 							source: media[i].display_src,
-							profileUrl: 'https://www.instagram.com/p/' + media[i].code,
+							instagramUrl: 'https://www.instagram.com/p/' + media[i].code,
+							caption: media[i].caption,
 							time: media[i].date
 						});
 					}

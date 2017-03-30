@@ -3,4 +3,6 @@ app.controller('instagramController', ['$scope', 'Constants', function($scope, C
 
 	self.brideAndGroom = Constants.privateImages;
 	self.instagramImages = Constants.publicImages;
+
+	$.fancybox.defaults.thumbs = { showOnStart : true };
 }]);

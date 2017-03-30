@@ -6977,7 +6977,7 @@ body {
   display: none;
   position: absolute;
   top: 0;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   overflow: hidden;
   margin-top: -20px;
@@ -6994,7 +6994,6 @@ body {
     .mobile-navigation ul.mobile-navigation-open {
       height: 210px; }
     .mobile-navigation ul li {
-      background-color: black;
       padding: 1em 0 0; }
       .mobile-navigation ul li a {
         display: inline-block; }

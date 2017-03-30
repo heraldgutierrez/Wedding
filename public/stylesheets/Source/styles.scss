@@ -20,6 +20,44 @@ body
 .mobile-navigation 
 {
 	display: none;
+	position: absolute;
+	top: 0;
+	background-color: black;
+	width: 100%;
+	overflow: hidden;
+	margin-top: -20px;
+	margin-left: -15px;
+	padding-top: 20px;
+	z-index: 999;
+
+	#mobile-navigation-label
+	{
+		width: 100%;
+		line-height: 1.5em;
+		letter-spacing: .4em;
+		padding-bottom: 10px;
+	}
+
+	ul 
+	{
+		height: 0;
+
+		&.mobile-navigation-open
+		{
+			height: $mobileHeaderHeight;
+		}
+
+		li
+		{
+			background-color: black;
+			padding: 1em 0 0;
+
+			a 
+			{
+				display: inline-block;
+			}
+		}
+	}
 }
 
 .outerWrapper
@@ -116,14 +154,6 @@ header
 	}
 }
 
-#mobile-navigation-label
-{
-	/*content: 'Menu';*/
-	width: 100%;
-	line-height: 1.5em;
-	letter-spacing: .4em;
-}
-
 a
 {
 	text-decoration: none;
@@ -154,8 +184,14 @@ a:hover, li.active a {
 		display: block;
 	}
 
-	.clock{
+	.clock
+	{
 		zoom: 0.55;
 		-moz-transform: scale(0.5)
+	}
+
+	.innerWrapper
+	{
+		margin-top: -($headerSpacing * 2);
 	}
 }

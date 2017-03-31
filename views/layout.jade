@@ -29,18 +29,11 @@ html
 				div.container
 					div.row
 						div.col-sm-12
-							nav.mobile-navigation
+							nav.navigation
 								center
 									div#mobile-navigation-label(ng-click='Main.mobileMenuClick()')
-										span MENU
+										span Menu
 									ul(ng-class='{ "mobile-navigation-open": Main.showMobile }')
-										li <a href="/">Home</a>
-										li <a href="/Wedding">Wedding</a>
-										li <a href="/Wedding-Social">Social</a>
-										li <a href="/HJSayIDo">#HJSayIDo</a>
-							nav.main-navigation
-								center
-									ul
 										li(class=title=='Home'?'active':undefined) <a href="/">Home</a>
 										li(class=title=='Wedding'?'active':undefined) <a href="/Wedding">Wedding</a>
 										li(class=title=='Wedding Social'?'active':undefined) <a href="/Wedding-Social">Social</a>

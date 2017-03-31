@@ -1,16 +1,11 @@
 @import "variables.scss"; 
 
-.outerWrapper
+body
 {
 	/*background-image: url('../images/together.jpg');*/
 	/*background-image: url('../images/cancun.jpg');*/
 
 	background-image: url('../images/lights.png');
-
-	.backgroundOverlay
-	{
-		background-color: rgba(49, 48, 48, .35);
-	}
 }
 
 .innerWrapper
@@ -31,6 +26,7 @@
 
 .home
 {
+	text-align: center;
 	position: relative;
 	top: 25%;
 }
@@ -40,4 +36,10 @@
 	color: white !important;
 	font-size: 20px;
 	right: -100px !important;
+}
+
+.flip-clock-wrapper {
+	margin: 0 auto !important;
+	max-width: 550px;
+	margin-top: 2em;
 }

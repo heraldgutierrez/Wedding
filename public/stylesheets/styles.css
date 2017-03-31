@@ -6966,43 +6966,17 @@ From: http://www.dafont.com/reditum.font
   /* IE */ }
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
   font-family: 'Josefin Sans', Helvetica, sans-serif;
   font-size: 20px; }
 
 body {
-  color: white; }
-
-.mobile-navigation {
-  display: none;
-  position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  overflow: hidden;
-  margin-top: -20px;
-  margin-left: -15px;
-  padding-top: 20px;
-  z-index: 999; }
-  .mobile-navigation #mobile-navigation-label {
-    width: 100%;
-    line-height: 1.5em;
-    letter-spacing: .4em;
-    padding-bottom: 10px; }
-  .mobile-navigation ul {
-    height: 0; }
-    .mobile-navigation ul.mobile-navigation-open {
-      height: 210px; }
-    .mobile-navigation ul li {
-      padding: 1em 0 0; }
-      .mobile-navigation ul li a {
-        display: inline-block; }
-
-.outerWrapper {
+  color: white;
   background-color: black;
   background-size: cover;
   background-position: center center;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   position: absolute;
   min-height: 100%;
@@ -7011,26 +6985,18 @@ body {
   height: 100%;
   z-index: 1;
   overflow-y: scroll; }
-  .outerWrapper .backgroundOverlay {
-    background-color: rgba(0, 0, 0, 0.75);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1; }
 
 header {
   display: block;
   margin-top: 20px;
   height: 85px; }
+  header #mobile-navigation-label {
+    display: none; }
   header nav {
     position: relative;
     top: 0;
     left: auto;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     font-family: 'Josefin Sans';
     text-transform: uppercase;
@@ -7039,6 +7005,7 @@ header {
       padding: 0;
       display: block; }
       header nav ul li {
+        display: inline-block;
         font-weight: 300;
         font-style: normal;
         line-height: 1.5em;
@@ -7047,11 +7014,6 @@ header {
         list-style-type: none;
         padding: 1em 1em 0;
         margin: 0; }
-  header nav.main-navigation ul li {
-    font-size: 25px;
-    display: inline-block; }
-  header nav.mobile-navigation ul li {
-    font-size: 20px; }
 
 a {
   text-decoration: none;
@@ -7066,11 +7028,32 @@ a:hover, li.active a {
 
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
-  .main-navigation {
-    display: none; }
-
-  .mobile-navigation {
-    display: block; }
+  header #mobile-navigation-label {
+    display: inline-block;
+    width: 100%;
+    line-height: 1.5em;
+    letter-spacing: .4em;
+    padding-bottom: 10px; }
+  header .container {
+    padding: 0; }
+  header nav {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    overflow: hidden;
+    margin-top: -20px;
+    padding-top: 20px;
+    z-index: 999; }
+    header nav ul {
+      height: 0; }
+      header nav ul.mobile-navigation-open {
+        height: 210px; }
+      header nav ul li {
+        display: block;
+        width: 100%;
+        font-size: 20px; }
+        header nav ul li a {
+          display: inline-block; }
 
   .clock {
     zoom: 0.55;

@@ -7038,7 +7038,7 @@ a:hover, li.active a {
     padding: 0; }
   header nav {
     display: block;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
     overflow: hidden;
     margin-top: -20px;

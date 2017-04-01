@@ -24,20 +24,19 @@ html
 		block scripts
 
 	body(ng-app='app' ng-controller='mainController as Main')
-		div.outerWrapper
-			header
+		header
+			nav.navigation
 				div.container
 					div.row
 						div.col-sm-12
-							nav.navigation
-								center
-									div#mobile-navigation-label(ng-click='Main.mobileMenuClick()')
-										span Menu
-									ul(ng-class='{ "mobile-navigation-open": Main.showMobile }')
-										li(class=title=='Home'?'active':undefined) <a href="/">Home</a>
-										li(class=title=='Wedding'?'active':undefined) <a href="/Wedding">Wedding</a>
-										li(class=title=='Wedding Social'?'active':undefined) <a href="/Wedding-Social">Social</a>
-										li(class=title=='#HJSayIDo'?'active':undefined) <a href="/HJSayIDo">#HJSayIDo</a>
-			div.innerWrapper
-				div.container
-					block content
+							center
+								div#mobile-navigation-label(ng-click='Main.mobileMenuClick()')
+									span Menu
+								ul
+									li(class=title=='Home'?'active':undefined) <a href="/">Home</a>
+									li(class=title=='Wedding'?'active':undefined) <a href="/Wedding">Wedding</a>
+									li(class=title=='Wedding Social'?'active':undefined) <a href="/Wedding-Social">Social</a>
+									li(class=title=='#HJSayIDo'?'active':undefined) <a href="/HJSayIDo">#HJSayIDo</a>
+		div.content
+			div.container
+				block content

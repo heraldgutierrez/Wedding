@@ -89,7 +89,7 @@ a:hover, li.active a {
 	color: rgb(150, 150, 150);
 }
 
-.innerWrapper
+.content
 {
 	padding-bottom: ($headerHeight + $headerSpacing);
 }
@@ -124,9 +124,15 @@ a:hover, li.active a {
 			padding-top: 20px;
 			z-index: 999;
 
+			.col-sm-12
+			{
+				padding: 0;
+			}
+
 			ul 
 			{
-				height: 0;
+				display: none;
+				/*height: 0;*/
 
 				&.mobile-navigation-open
 				{
@@ -154,7 +160,7 @@ a:hover, li.active a {
 		-moz-transform: scale(0.5)
 	}
 
-	.innerWrapper
+	.content
 	{
 		margin-top: -($headerSpacing * 2);
 	}

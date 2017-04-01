@@ -1,10 +1,16 @@
 app.controller('mainController', ['$scope', function($scope) {
 	var self = this;
 
-	self.showMobile = false;
+	var showMobile = false;
 	
 	self.mobileMenuClick = function()
 	{
-		self.showMobile = !self.showMobile;
+		showMobile = !showMobile;
+
+		if (showMobile) {
+			$('nav ul').slideDown();
+		} else {
+			$('nav ul').slideUp();			
+		}
 	}
 }]);

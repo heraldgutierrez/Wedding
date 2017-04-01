@@ -7023,7 +7023,7 @@ a:hover, li.active a {
   text-decoration: none !important;
   color: #969696; }
 
-.innerWrapper {
+.content {
   padding-bottom: 105px; }
 
 /* Small devices (tablets, 768px and down) */
@@ -7044,8 +7044,11 @@ a:hover, li.active a {
     margin-top: -20px;
     padding-top: 20px;
     z-index: 999; }
+    header nav .col-sm-12 {
+      padding: 0; }
     header nav ul {
-      height: 0; }
+      display: none;
+      /*height: 0;*/ }
       header nav ul.mobile-navigation-open {
         height: 210px; }
       header nav ul li {
@@ -7059,5 +7062,5 @@ a:hover, li.active a {
     zoom: 0.55;
     -moz-transform: scale(0.5); }
 
-  .innerWrapper {
+  .content {
     margin-top: -40px; } }

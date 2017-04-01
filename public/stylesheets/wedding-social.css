@@ -1,5 +1,10 @@
 body {
-  background-image: url("../images/selfie.png"); }
+  background-image: url("../images/selfie.jpg"); }
 
 .thank-you {
   font-size: 30px; }
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  body {
+    background-image: url("../images/selfie-mobile.jpg"); } }

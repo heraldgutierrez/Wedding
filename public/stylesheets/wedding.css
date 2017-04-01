@@ -1,4 +1,9 @@
 body {
   /*background-image: url('../images/selfie.jpg');*/
   /*background-image: url('../images/holding-hands.jpg');*/
-  background-image: url("../images/cancun.png"); }
+  background-image: url("../images/cancun.jpg"); }
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  body {
+    background-image: url("../images/cancun-mobile.jpg"); } }

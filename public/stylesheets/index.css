@@ -1,7 +1,7 @@
 body {
   /*background-image: url('../images/together.jpg');*/
   /*background-image: url('../images/cancun.jpg');*/
-  background-image: url("../images/lights.png"); }
+  background-image: url("../images/lights.jpg"); }
 
 .content {
   padding-bottom: 0;
@@ -27,3 +27,8 @@ body {
   margin: 0 auto !important;
   max-width: 550px;
   margin-top: 2em; }
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  body {
+    background-image: url("../images/lights-mobile.jpg"); } }

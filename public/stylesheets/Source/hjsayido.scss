@@ -1,6 +1,6 @@
 body
 {
-	background-image: url('../images/together.png');
+	background-image: url('../images/together.jpg');
 }
 
 
@@ -36,6 +36,11 @@ body
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px)
 {
+	body
+	{
+		background-image: url('../images/together-mobile.jpg');
+	}
+	
 	h1 
 	{
 		font-size: 24px;
@@ -57,6 +62,4 @@ body
 			padding: 3px;
 		}
 	}
-
-	
 }

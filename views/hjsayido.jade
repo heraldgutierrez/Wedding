@@ -17,14 +17,14 @@ block content
 	div(ng-controller='instagramController as IG')
 		div.row
 			div.col-sm-12.center
-				h1 Recently from the Bride and Groom
+				h1 <span>R</span>ecently from the <span>B</span>ride and <span>G</span>room
 				div.instgram-container
 					div.instgram-image(ng-repeat='image in IG.brideAndGroom | orderBy: "-time" | limitTo: 15')
 						a(data-fancybox href="{{ image.instagramUrl }}" data-caption='<center><a href="https://www.instagram.com/{{ image.username }}" target="_blank">@{{ image.username }}</a>: {{ image.caption }}</center>')
 							img(src='{{ image.source }}')
 
 				div.instgram-container.guests(ng-show='IG.instagramImages.length > 0')
-					h1 Recently from the Guests using #HJSayIDo
+					h1 <span>R</span>ecently from the <span>G</span>uests <span>U</span>sing <span>#HJS</span>ay<span>ID</span>o
 					h2 Tag your Instagram photos with #HJSayIDo. Only public photos can be displayed.
 					div.instgram-image(ng-repeat='image in IG.instagramImages | orderBy: "-time"')
 						a(data-fancybox href="{{ image.instagramUrl }}" data-caption="<center>{{ image.caption }}</center>")

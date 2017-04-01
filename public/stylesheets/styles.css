@@ -7003,7 +7003,7 @@ header {
     margin: 0 auto;
     font-family: 'Josefin Sans';
     text-transform: uppercase;
-    font-size: 20px; }
+    font-size: 25px; }
     header nav ul {
       padding: 0;
       display: block; }
@@ -7029,14 +7029,25 @@ a:hover, li.active a {
 .content {
   padding-bottom: 25px; }
   .content h1 {
-    margin-bottom: 20px;
-    text-transform: capitalize; }
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+    .content h1 span {
+      font-size: 50px; }
   .content h2 {
-    text-transform: capitalize; }
+    text-transform: uppercase;
+    padding-top: 20px; }
+    .content h2 span {
+      font-size: 50px; }
   .content p {
     margin-top: 20px; }
     .content p span {
       display: block; }
+  .content ul {
+    padding-bottom: 10px; }
+  .content .subheading {
+    text-transform: uppercase; }
+    .content .subheading span {
+      font-size: 50px; }
 
 .uppercase {
   text-transform: uppercase; }

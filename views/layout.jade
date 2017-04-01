@@ -28,15 +28,14 @@ html
 			nav.navigation
 				div.container
 					div.row
-						div.col-sm-12
-							center
-								div#mobile-navigation-label(ng-click='Main.mobileMenuClick()')
-									span Menu
-								ul
-									li(class=title=='Home'?'active':undefined) <a href="/">Home</a>
-									li(class=title=='Wedding'?'active':undefined) <a href="/Wedding">Wedding</a>
-									li(class=title=='Wedding Social'?'active':undefined) <a href="/Wedding-Social">Social</a>
-									li(class=title=='#HJSayIDo'?'active':undefined) <a href="/HJSayIDo">#HJSayIDo</a>
+						div.col-sm-12.center
+							div#mobile-navigation-label(ng-click='Main.mobileMenuClick()')
+								span Menu
+							ul
+								li.col-md-3(class=title=='Home'?'active':undefined) <a href="/">Home</a>
+								li.col-md-3(class=title=='Wedding'?'active':undefined) <a href="/Wedding">Wedding</a>
+								li.col-md-3(class=title=='Wedding Social'?'active':undefined) <a href="/Wedding-Social">Social</a>
+								li.col-md-3(class=title=='#HJSayIDo'?'active':undefined) <a href="/HJSayIDo">#HJSayIDo</a>
 		div.content
 			div.container
 				block content

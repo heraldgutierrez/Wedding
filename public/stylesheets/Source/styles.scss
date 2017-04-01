@@ -164,6 +164,11 @@ a:hover, li.active a {
 /* Small devices (tablets, 768px and down) */
 @media (max-width: $screen-sm-min)
 {
+	body
+	{
+		background-attachment: scroll;
+	}
+	
 	header 
 	{
 		#mobile-navigation-label

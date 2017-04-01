@@ -2,6 +2,7 @@ body {
   background-image: url("../images/selfie.jpg"); }
 
 .thank-you {
+  text-transform: none !important;
   font-size: 30px; }
 
 /* Small devices (tablets, 768px and down) */

@@ -97,7 +97,7 @@ a:hover, li.active a {
 {
 	padding-bottom: 25px;
 
-	h1 
+	h1, h2
 	{
 		text-transform: uppercase;
 		margin-bottom: 20px;
@@ -108,14 +108,14 @@ a:hover, li.active a {
 		}
 	}
 
-	h2
+	h3
 	{
 		text-transform: uppercase;
 		padding-top: 20px;
 
 		span
 		{
-			font-size: 50px;
+			font-size: 40px;
 		}
 	}
 
@@ -168,7 +168,7 @@ a:hover, li.active a {
 	{
 		background-attachment: scroll;
 	}
-	
+
 	header 
 	{
 		#mobile-navigation-label

@@ -5,6 +5,25 @@ body
 	background-image: url('../images/cancun.jpg');
 }
 
+.content
+{
+	ul
+	{
+		margin: 0;
+		padding: 0;
+		
+		li
+		{
+			list-style-type: none;
+		}
+	}	
+}
+
+.brideAndGroom
+{
+	font-size: 30px;
+}
+
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px)
 {

@@ -7028,16 +7028,16 @@ a:hover, li.active a {
 
 .content {
   padding-bottom: 25px; }
-  .content h1 {
+  .content h1, .content h2 {
     text-transform: uppercase;
     margin-bottom: 20px; }
-    .content h1 span {
+    .content h1 span, .content h2 span {
       font-size: 50px; }
-  .content h2 {
+  .content h3 {
     text-transform: uppercase;
     padding-top: 20px; }
-    .content h2 span {
-      font-size: 50px; }
+    .content h3 span {
+      font-size: 40px; }
   .content p {
     margin-top: 20px; }
     .content p span {

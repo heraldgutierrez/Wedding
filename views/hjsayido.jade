@@ -23,7 +23,8 @@ block content
 						a(data-fancybox href="{{ image.instagramUrl }}" data-caption='<center><a href="https://www.instagram.com/{{ image.username }}" target="_blank">@{{ image.username }}</a>: {{ image.caption }}</center>')
 							img(src='{{ image.source }}')
 
-				div.instgram-container.guests(ng-show='IG.instagramImages.length > 0')
+				//- div.instgram-container.guests(ng-show='IG.instagramImages.length > 0')
+				div.instgram-container.guests
 					h1 <span>R</span>ecently from the <span>G</span>uests <span>U</span>sing <span>#HJS</span>ay<span>ID</span>o
 					h2 Tag your Instagram photos with #HJSayIDo. Only public photos can be displayed.
 					div.instgram-image(ng-repeat='image in IG.instagramImages | orderBy: "-time"')

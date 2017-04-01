@@ -6,12 +6,15 @@ block styles
 
 block scripts
 	script(type="text/javascript" src="/scripts/Libs/flipclock.min.js")
-	script(type="text/javascript" src="/scripts/countdown.js")
+	script(type="text/javascript" src="/scripts/Controllers/home-controller.js")
+	//- script(type="text/javascript" src="/scripts/countdown.js")
 
 block content
-	div.home
+	div.home(ng-controller='homeController as Home')
 		div.row
 			div.col-sm-12
+				h1 {{ Home.weddingDate | ddMMyyyy }}
+				br
 				div.clock(style="margin:2em;")
 				div
 					h1 Until "I DO"

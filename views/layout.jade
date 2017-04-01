@@ -17,10 +17,11 @@ html
 		
 		script(type="text/javascript" src="/scripts/Libs/angular.js")
 		script(type="text/javascript" src="/scripts/Libs/jquery.min.js")
-		script(type="text/javascript" src="/scripts/wedding.js")			
+
+		script(type="text/javascript" src="/scripts/wedding.js")
 		script(type="text/javascript" src="/scripts/Services/Utility.js")
-		script(type="text/javascript" src="/scripts/Directives/countdown.js")
 		script(type="text/javascript" src="/scripts/Controllers/main-controller.js")
+		script(type="text/javascript" src="/scripts/Filters/ddMMyyyyFilter.js")
 		block scripts
 
 	body(ng-app='app' ng-controller='mainController as Main')
@@ -36,6 +37,7 @@ html
 								li.col-md-3(class=title=='Wedding'?'active':undefined) <a href="/Wedding">Wedding</a>
 								li.col-md-3(class=title=='Wedding Social'?'active':undefined) <a href="/Wedding-Social">Social</a>
 								li.col-md-3(class=title=='#HJSayIDo'?'active':undefined) <a href="/HJSayIDo">#HJSayIDo</a>
+
 		div.content
 			div.container
 				block content

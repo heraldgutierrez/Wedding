@@ -233,5 +233,15 @@ a:hover, li.active a {
 	.content
 	{
 		margin-top: -$headerSpacing;
+
+		h1
+		{
+			font-size: 25px;
+		}
+
+		h1, h2, h3 
+		{
+			margin-bottom: 0;
+		}
 	}
 }

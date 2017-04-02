@@ -1,0 +1,65 @@
+body
+{
+	/*background-image: url('../images/selfie.jpg');*/
+	/*background-image: url('../images/holding-hands.jpg');*/
+	background-image: url('../images/cancun.jpg');
+}
+
+.content
+{
+	ul
+	{
+		margin: 0;
+		padding: 0;
+		
+		li
+		{
+			display: inline-block;
+			list-style-type: none;
+
+			img 
+			{
+				margin: 5px;
+			}
+		}
+	}	
+}
+
+.brideAndGroom
+{
+	img 
+	{
+		width: 200px;
+		height: 250px;
+
+		&:first-child
+		{
+			margin-left: 15px !important;
+			margin-right: 15px !important;
+		}
+	}
+}
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: 768px)
+{
+	body
+	{
+		background-image: url('../images/cancun-mobile.jpg');
+	}
+
+	.brideAndGroom
+	{
+		img 
+		{
+			width: 125px;
+			height: 175px;
+
+			&:first-child
+			{
+				margin-left: 5px !important;
+				margin-right: 5px !important;
+			}
+		}
+	}
+}

@@ -21,12 +21,9 @@ body {
   body {
     background-image: url("../images/together-mobile.jpg"); }
 
-  h1 {
-    font-size: 24px; }
-
   .instgram-container {
     text-align: center; }
-    .instgram-container h2 {
+    .instgram-container h1, .instgram-container h2 {
       font-size: 20px; }
     .instgram-container .instgram-image, .instgram-container img {
       width: 110px;

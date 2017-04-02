@@ -7,10 +7,23 @@ body {
   margin: 0;
   padding: 0; }
   .content ul li {
+    text-align: center;
     display: inline-block;
-    list-style-type: none; }
+    list-style-type: none;
+    opacity: 0.75;
+    transition: 0.3s ease;
+    margin: 5px; }
     .content ul li img {
-      margin: 5px; }
+      margin: 0 auto;
+      display: block; }
+    .content ul li span {
+      z-index: -99;
+      display: none; }
+    .content ul li:hover {
+      transform: scale(1.5, 1.5);
+      opacity: 1; }
+      .content ul li:hover span {
+        display: block; }
 
 .brideAndGroom img {
   width: 200px;
@@ -24,9 +37,12 @@ body {
   body {
     background-image: url("../images/cancun-mobile.jpg"); }
 
-  .brideAndGroom img {
+  .content ul li img {
+    width: 80px;
+    height: 80px; }
+  .content .brideAndGroom img {
     width: 125px;
     height: 175px; }
-    .brideAndGroom img:first-child {
+    .content .brideAndGroom img:first-child {
       margin-left: 5px !important;
       margin-right: 5px !important; } }

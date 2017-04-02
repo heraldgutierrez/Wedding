@@ -14,8 +14,7 @@ module.exports = (function() {
 	var router = express.Router();
 
 	router.get('/', function(req, res) { res.render('index', { title: 'Home' }); });
-	router.get('/Wedding', function(req, res) { res.render('wedding2', { title: 'Wedding' }); });
-	router.get('/Wedding2', function(req, res) { res.render('wedding', { title: 'Wedding' }); });
+	router.get('/Wedding', function(req, res) { res.render('wedding', { title: 'Wedding' }); });
 	router.get('/Wedding-Social', function(req, res) { res.render('wedding-social', { title: 'Wedding Social' }); });
 	router.get('/Privacy-Policy', function(req, res) { res.render('privacy-policy', { title: 'Privacy Policy' }); });
 
@@ -24,7 +23,7 @@ module.exports = (function() {
 		getPrivatePhotos(req, res, privateImages, false);
 	});
 
-	function getPrivatePhotos(req, res, privateImages, isSecondCall) {
+	var getPrivatePhotos = function(req, res, privateImages, isSecondCall) {
 		var data = '';
 		var url = privateUrl + '' + jAT;
 
@@ -69,7 +68,7 @@ module.exports = (function() {
 		}); 
 	}
 
-	function getPublicImages(req, res, privateImages, publicImages, endCursor) {
+	var getPublicImages = function(req, res, privateImages, publicImages, endCursor) {
 		var data = '';
 		var url = publicUrl;
 
@@ -108,7 +107,7 @@ module.exports = (function() {
 		}); 
 	}
 
-	function displayHJSayIDo(req, res, privateImages, publicImages) {
+	var displayHJSayIDo = function(req, res, privateImages, publicImages) {
 		res.render('hjsayido', { 
 			title: '#HJSayIDo',
 			privateImages: JSON.stringify(privateImages),

@@ -8,11 +8,49 @@ body {
   padding: 0; }
   .content ul li {
     list-style-type: none; }
+  .content ul.headshot li {
+    text-align: center;
+    display: inline-block;
+    opacity: 0.75;
+    transition: 0.3s ease;
+    margin: 5px; }
+    .content ul.headshot li img {
+      margin: 0 auto;
+      display: block;
+      border: 1px solid;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px; }
+    .content ul.headshot li span {
+      visibility: hidden; }
+    .content ul.headshot li:hover, .content ul.headshot li:focus {
+      transform: scale(1.5, 1.5);
+      opacity: 1;
+      z-index: 999;
+      padding: 0 10px; }
+      .content ul.headshot li:hover span, .content ul.headshot li:focus span {
+        visibility: visible; }
 
-.brideAndGroom {
-  font-size: 30px; }
+.brideAndGroom img {
+  width: 200px;
+  height: 250px; }
+  .brideAndGroom img:first-child {
+    margin-left: 15px !important;
+    margin-right: 15px !important; }
 
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
   body {
-    background-image: url("../images/cancun-mobile.jpg"); } }
+    background-image: url("../images/cancun-mobile.jpg"); }
+
+  .content .brideAndGroom img {
+    width: 125px !important;
+    height: 175px !important; }
+    .content .brideAndGroom img:first-child {
+      margin-left: 5px !important;
+      margin-right: 5px !important; }
+  .content ul.headshot li span {
+    visibility: visible; }
+  .content ul.headshot li img {
+    width: 80px;
+    height: 80px; } }

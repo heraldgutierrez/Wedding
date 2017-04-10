@@ -17,10 +17,11 @@ body {
     .content ul.headshot li img {
       margin: 0 auto;
       display: block;
-      border: 1px solid;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
-      border-radius: 50%; }
+      border-radius: 50%;
+      width: 75px;
+      height: 75px; }
     .content ul.headshot li span {
       visibility: hidden; }
     .content ul.headshot li:hover, .content ul.headshot li:focus {

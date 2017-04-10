@@ -32,10 +32,16 @@ body
 					margin: 0 auto;
 					display: block;
 					
-					border: 1px solid;
+					// mask-image: url('../images/cicle-mask.png');
+					// mask-mode: alpha;
+					// mask-repeat: no-repeat;
+					// mask-size: 100%;		
+					// border: 1px solid;
 					-webkit-border-radius: 50%;
 					-moz-border-radius: 50%;
 					border-radius: 50%;
+					width: 75px;
+					height: 75px;
 				}
 
 				span 

@@ -70,8 +70,8 @@ body
 {
 	img 
 	{
-		width: 200px;
-		height: 250px;
+		width: 200px !important;
+		height: 250px !important;
 
 		&:first-child
 		{

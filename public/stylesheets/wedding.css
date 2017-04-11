@@ -13,7 +13,8 @@ body {
     display: inline-block;
     opacity: 0.75;
     transition: 0.3s ease;
-    margin: 5px; }
+    margin: 5px;
+    padding: 0 5px; }
     .content ul.headshot li img {
       margin: 0 auto;
       display: block;
@@ -28,13 +29,16 @@ body {
       transform: scale(1.5, 1.5);
       opacity: 1;
       z-index: 999;
-      padding: 0 10px; }
+      padding: 0 15px; }
       .content ul.headshot li:hover span, .content ul.headshot li:focus span {
         visibility: visible; }
 
 .brideAndGroom img {
   width: 200px !important;
-  height: 250px !important; }
+  height: 250px !important;
+  -webkit-border-radius: 25% !important;
+  -moz-border-radius: 25% !important;
+  border-radius: 25% !important; }
   .brideAndGroom img:first-child {
     margin-left: 15px !important;
     margin-right: 15px !important; }

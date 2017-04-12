@@ -5,6 +5,20 @@ body {
   text-transform: none !important;
   font-size: 30px; }
 
+table {
+  border-collapse: collapse;
+  margin-bottom: 30px; }
+  table tr th {
+    text-align: center;
+    font-size: 30px;
+    padding: 5px; }
+  table tr td {
+    padding: 10px;
+    vertical-align: top; }
+
+table, th, td {
+  border: 1px solid white; }
+
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
   body {

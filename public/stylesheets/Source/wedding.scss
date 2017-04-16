@@ -42,6 +42,7 @@ body
 
 				span 
 				{
+					word-wrap: break-word;
 					visibility: hidden;
 				}
 
@@ -272,6 +273,11 @@ body
 		font-weight: bold;
 		margin-top: 0;
 		color: inherit;
+
+		.fa 
+		{
+			margin-right: 5px;
+		}
 	}
 
 	.timeline-body > p,
@@ -280,7 +286,7 @@ body
 	}
 
 	.timeline-body > p + p {
-		margin-top: 5px;
+		margin-top: 20px;
 	}
 }
 
@@ -339,8 +345,11 @@ body
 
 		> li 
 		{
+			text-align: left !important;
+
 			> .timeline-panel 
 			{
+				width: 43%;
 				float: right;
 
 				&:before 

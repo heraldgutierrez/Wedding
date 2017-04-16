@@ -24,6 +24,7 @@ body {
       width: 75px;
       height: 75px; }
     .content ul.headshot li span {
+      word-wrap: break-word;
       visibility: hidden; }
     .content ul.headshot li:hover, .content ul.headshot li:focus {
       transform: scale(1.25, 1.25);
@@ -162,11 +163,13 @@ body {
     font-weight: bold;
     margin-top: 0;
     color: inherit; }
+    .timeline .timeline-title .fa {
+      margin-right: 5px; }
   .timeline .timeline-body > p,
   .timeline .timeline-body > ul {
     margin-bottom: 0; }
   .timeline .timeline-body > p + p {
-    margin-top: 5px; }
+    margin-top: 20px; }
 
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
@@ -187,15 +190,18 @@ body {
 
   .timeline {
     margin-left: -80% !important; }
-    .timeline > li > .timeline-panel {
-      float: right; }
-      .timeline > li > .timeline-panel:before {
-        border-left-width: 0;
-        border-right-width: 15px;
-        left: -15px;
-        right: auto; }
-      .timeline > li > .timeline-panel:after {
-        border-left-width: 0;
-        border-right-width: 14px;
-        left: -14px;
-        right: auto; } }
+    .timeline > li {
+      text-align: left !important; }
+      .timeline > li > .timeline-panel {
+        width: 43%;
+        float: right; }
+        .timeline > li > .timeline-panel:before {
+          border-left-width: 0;
+          border-right-width: 15px;
+          left: -15px;
+          right: auto; }
+        .timeline > li > .timeline-panel:after {
+          border-left-width: 0;
+          border-right-width: 14px;
+          left: -14px;
+          right: auto; } }

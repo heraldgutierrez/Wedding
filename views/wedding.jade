@@ -1,18 +1,22 @@
 extends layout
 
 block styles
-	link(rel='stylesheet', href='/stylesheets/wedding.css')
+	link(type='text/css' rel='stylesheet' href='/stylesheets/wedding.css')
+	link(type='text/css' rel='stylesheet' href='/stylesheets/polaroids.css')
 
 block content
 	div.row
 		div.col-sm-10.col-sm-offset-1
 			div.center
 				h1 <span>B</span>ride and <span>G</span>room
-				div.row.brideAndGroom
-					div.col-md-12
-						ul.headshot
-							li <img src="/images/entourage/Joanne.jpg" /><span>Joanne</span>
-							li <img src="/images/entourage/Herald.jpg" /><span>Herald</span>
+				//- div.row.brideAndGroom
+				//- 	div.col-md-12
+				//- 		ul.headshot
+				//- 			li <img src="/images/entourage/Joanne.jpg" /><span>Joanne</span>
+				//- 			li <img src="/images/entourage/Herald.jpg" /><span>Herald</span>
+				ul.polaroids
+					li <img src="/images/entourage/Joanne.jpg" /><span>Joanne</span>
+					li <img src="/images/entourage/Herald.jpg" /><span>Herald</span>
 
 			div.row
 				div.col-md-12
@@ -129,7 +133,7 @@ block content
 						ul.headshot
 							li <img src="/images/entourage/Alvin.jpg" /><span>Alvin</span>
 							li <img src="/images/entourage/Archie.jpg" /><span>Archie</span>
-							li <img src="/images/entourage/male-blank.jpg" /><span>Bennet</span>
+							li <img src="/images/entourage/Benn.jpg" /><span>Bennet</span>
 							li <img src="/images/entourage/Christian.jpg" /><span>Christian</span>
 							li <img src="/images/entourage/male-blank.jpg" /><span>Jekko</span>
 							li <img src="/images/entourage/Mark.jpg" /><span>Mark</span>

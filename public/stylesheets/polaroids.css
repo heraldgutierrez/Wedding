@@ -1,0 +1,39 @@
+.polaroids {
+  list-style: none;
+  margin-left: 0;
+  text-align: center; }
+  .polaroids li {
+    background-color: #fff;
+    display: inline-block;
+    height: 295px;
+    padding: 5px 5px 40px 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); }
+    .polaroids li:nth-child(even) {
+      -webkit-transform: rotate(2deg);
+      -moz-transform: rotate(2deg);
+      transform: rotate(2deg); }
+    .polaroids li:hover {
+      -webkit-transform: scale(1.25);
+      -moz-transform: scale(1.25);
+      transform: scale(1.25);
+      -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+      position: relative;
+      z-index: 5; }
+    .polaroids li span {
+      color: black;
+      font-family: 'Permanent Marker', cursive; }
+    .polaroids li img {
+      display: block;
+      height: 250px;
+      margin-bottom: 5px;
+      width: 250px; }

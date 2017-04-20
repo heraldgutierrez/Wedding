@@ -2,6 +2,7 @@
 {
 	list-style: none;
 	margin-left: 0;
+	padding: 0;
 	text-align: center;
 
 	li
@@ -9,7 +10,9 @@
 		background-color: #fff;
 		display: inline-block;
 		height: 295px;
+		max-width: 260px;
 		padding: 5px 5px 40px 5px;
+		vertical-align: top;
 
 		-webkit-transition: all 0.3s ease-in-out;
 		-moz-transition: all 0.3s ease-in-out;
@@ -52,6 +55,8 @@
 		{
 			color: black;
 			font-family: 'Permanent Marker', cursive;
+			display: block;
+			word-wrap: break-word;
 		}
 
 		img
@@ -63,6 +68,103 @@
 
 			&:hover
 			{
+			}
+		}
+	}
+
+	&.polaroids-grid
+	{
+		li
+		{
+			-webkit-transform: none;
+			-moz-transform: none;
+			transform: none;
+
+			/*padding: 5px 5px 60px 5px;*/
+			height: 320px;
+			margin: 5px;
+
+			&:hover
+			{
+				-webkit-transform: none;
+				-moz-transform: none;
+				transform: none;
+			}
+
+			span
+			{
+				font-size: 18px;
+
+				&.donated-by
+				{
+					font-size: 11px;
+				}
+			}
+
+			img
+			{
+				display: block;
+				margin-bottom: 5px;
+
+				&:hover
+				{
+				}
+			}
+		}
+	}
+}
+
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: 768px)
+{
+	.polaroids
+	{
+		li
+		{
+			height: 200px;
+			max-width: 160px;
+
+			&:hover
+			{
+				-webkit-transform: none;
+				-moz-transform: none;
+				transform: none;
+			}
+
+			img
+			{
+				height: 150px;
+				width: 150px;
+			}
+		}
+
+		&.polaroids-grid
+		{
+			li
+			{
+				height: 280px;
+				margin: 5px;
+
+				span
+				{
+					font-size: 18px;
+
+					&.donated-by
+					{
+						font-size: 12px;
+					}
+				}
+
+				img
+				{
+					display: block;
+					margin-bottom: 5px;
+
+					&:hover
+					{
+					}
+				}
 			}
 		}
 	}

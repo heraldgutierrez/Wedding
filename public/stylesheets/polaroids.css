@@ -1,12 +1,15 @@
 .polaroids {
   list-style: none;
   margin-left: 0;
+  padding: 0;
   text-align: center; }
   .polaroids li {
     background-color: #fff;
     display: inline-block;
     height: 295px;
+    max-width: 260px;
     padding: 5px 5px 40px 5px;
+    vertical-align: top;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -31,9 +34,52 @@
       z-index: 5; }
     .polaroids li span {
       color: black;
-      font-family: 'Permanent Marker', cursive; }
+      font-family: 'Permanent Marker', cursive;
+      display: block;
+      word-wrap: break-word; }
     .polaroids li img {
       display: block;
       height: 250px;
       margin-bottom: 5px;
       width: 250px; }
+  .polaroids.polaroids-grid li {
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+    /*padding: 5px 5px 60px 5px;*/
+    height: 320px;
+    margin: 5px; }
+    .polaroids.polaroids-grid li:hover {
+      -webkit-transform: none;
+      -moz-transform: none;
+      transform: none; }
+    .polaroids.polaroids-grid li span {
+      font-size: 18px; }
+      .polaroids.polaroids-grid li span.donated-by {
+        font-size: 11px; }
+    .polaroids.polaroids-grid li img {
+      display: block;
+      margin-bottom: 5px; }
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .polaroids li {
+    height: 200px;
+    max-width: 160px; }
+    .polaroids li:hover {
+      -webkit-transform: none;
+      -moz-transform: none;
+      transform: none; }
+    .polaroids li img {
+      height: 150px;
+      width: 150px; }
+  .polaroids.polaroids-grid li {
+    height: 280px;
+    margin: 5px; }
+    .polaroids.polaroids-grid li span {
+      font-size: 18px; }
+      .polaroids.polaroids-grid li span.donated-by {
+        font-size: 12px; }
+    .polaroids.polaroids-grid li img {
+      display: block;
+      margin-bottom: 5px; } }

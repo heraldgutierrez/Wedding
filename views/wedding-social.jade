@@ -1,7 +1,8 @@
 extends layout
 
 block styles
-	link(rel='stylesheet', href='/stylesheets/wedding-social.css')
+	link(type='text/css' rel='stylesheet' href='/stylesheets/wedding-social.css')
+	link(type='text/css' rel='stylesheet' href='/stylesheets/polaroids.css')
 
 block content
 	div.row
@@ -12,7 +13,7 @@ block content
 			p 
 				span Punjab Cultural Centre
 				span 1770 King Edward St. Winnipeg, MB
-				span Saturday November 4, 2017 at 8:00pm - 1:00am
+				span Saturday November 4, 2017 at 7:00pm - 1:00am
 	br
 	div.row
 		div.col-sm-8.col-sm-offset-2
@@ -61,80 +62,176 @@ block content
 					li The Best Dressed Female
 					li The Best Dressed Couple
 
+	div.row
+		div.col-sm-10.col-sm-offset-1
 			h2.subheading.center <span>P</span>rizes
-			table.col-xs-12
-				thead
-					tr
-						th.col-xs-6 Grand Prizes
-						th.col-xs-6 Donated By
-				tbody
-					tr
-						td $1000 Travel Voucher
-						td Archie & Mary Ballesteros, Honesto & Lita Rutaquio, and Lea Larion
-					tr
-						td TV
-						td 
-					tr
-						td GoPro Hero 5 
-						td Herschel Gutierrez and Joanna Reyes
-					tr
-						td Apple Package 
-						td Harvey and Sheri Gutierrez
-					tr
-						td Console (Nintendo Switch?)
-						td Axalan Family
+			h2.subheading.center <span>G</span>rand <span>P</span>rizes
+			ul.polaroids.polaroids-grid
+				li 
+					img(src='/images/prizes/travel-voucher.jpg')
+					span.prize $1000 Travel Voucher
+					span.donated-by Archie & Mary Ballesteros, Honesto & Lita Rutaquio, and Lea Larion
+				li 
+					img(src='/images/prizes/tv.jpg')
+					span.prize TV
+					span.donated-by
+				li 
+					img(src='/images/prizes/gopro-hero-5.jpg')
+					span.prize GoPro Hero 5 
+					span.donated-by Herschel Gutierrez and Joanna Reyes
+				li 
+					img(src='/images/prizes/apple-package.jpg')
+					span.prize Apple Package 
+					span.donated-by Harvey and Sheri Gutierrez
+				li 
+					img(src='/images/prizes/nintendo-switch.jpg')
+					span.prize Nintendo Switch
+					span.donated-by Axalan Family
 
-			table.col-xs-12
-				thead
-					tr
-						th.col-xs-6 Regular Prizes
-						th.col-xs-6 Donated By
-				tbody
-					tr
-						td Yoli Package
-						td 
-					tr
-						td Beauty Package (Eyelashes, Perfume, Facial, Makeup, Mani/Pedi)
-						td 
-					tr
-						td Lottery Tree
-						td 
-					tr
-						td Alcohol Package + Shotglass Roulette Wheel
-						td Joyce Axalan and Raymond Dabu
-					tr
-						td Kitchen Aid Mixer
-						td Katrina Galapon, Alvin Albay, and Sherlyn & Jeremy Watson
-					tr
-						td Fitness Package
-						td Christine Capucion, Nadine Maranan, and Gayle Baybay
-					tr
-						td Date Night Package
-						td 
-					tr
-						td His and Hers Package (Kate Spade Bag and Waller)
-						td Harvey and Sheri Gutierrez
-					tr
-						td Jets Package
-						td 
-					tr
-						td Basketball Package (Hoop and Ball)
-						td Mark Capucion, Christian Lozano, Shannon Maranan, John Raven 
-					tr
-						td Car Package (Oil Change, Car Wash, Car Fresheners, Etc...)
-						td 
-					tr
-						td Mini-Fridge with Beer
-						td 
-					tr
-						td Mountain Bike
-						td 
-					tr
-						td Lawn Mower
-						td 
-					tr
-						td Camping Package
-						td Harvey and Sheri Gutierrez
+	div.row
+		div.col-sm-12
+			h2.subheading.center <span>R</span>egular <span>P</span>rizes
+			ul.polaroids.polaroids-grid
+				li 
+					img(src='/images/prizes/yoli.jpg')
+					span.prize Yoli Package
+					span.donated-by 
+				li 
+					img(src='/images/prizes/beauty-package.jpg')
+					span.prize Beauty Package
+					span.donated-by 
+				li 
+					img(src='/images/prizes/lottery-tree.jpg')
+					span.prize Lottery Tree
+					span.donated-by 
+				li 
+					img(src='/images/prizes/alcohol-package.jpg')
+					span.prize Alcohol Package
+					span.donated-by Joyce Axalan and Raymond Dabu
+				li 
+					img(src='/images/prizes/kitchen-aid.jpg')
+					span.prize Kitchen Aid Mixer
+					span.donated-by Katrina Galapon, Alvin Albay, and Sherlyn & Jeremy Watson
+				li 
+					img(src='/images/prizes/fitness-package.jpg')
+					span.prize Fitness Package
+					span.donated-by Christine Capucion, Nadine Maranan, and Gayle Baybay
+				li 
+					img(src='/images/prizes/date-night-package.jpg')
+					span.prize Date Night Package
+					span.donated-by 
+				li 
+					img(src='/images/prizes/his-hers-package.jpg')
+					span.prize His and Hers Package
+					span.donated-by Harvey and Sheri Gutierrez
+				li 
+					img(src='/images/prizes/jets-package.jpg')
+					span.prize Jets Package
+					span.donated-by 
+				li 
+					img(src='/images/prizes/basketball-package.jpg')
+					span.prize Basketball Package
+					span.donated-by Mark Capucion, Christian Lozano, Shannon Maranan, John Raven 
+				li 
+					img(src='/images/prizes/car-package.jpg')
+					span.prize Car Package 
+					span.donated-by 
+				li 
+					img(src='/images/prizes/mini-fridge.jpg')
+					span.prize Mini-Fridge with Beer
+					span.donated-by 
+				li 
+					img(src='/images/prizes/bike.jpg')
+					span.prize Mountain Bike
+					span.donated-by 
+				li 
+					img(src='/images/prizes/lawn-mower.jpg')
+					span.prize Lawn Mower
+					span.donated-by 
+				li 
+					img(src='/images/prizes/camping-package.jpg')
+					span.prize Camping Package
+					span.donated-by Harvey and Sheri Gutierrez
+				//- li 
+				//- 	img(src='/images/prizes/coming-soon.jpg')
+				//- 	span.prize 
+				//- 	span.donated-by 
 
+
+	//- div.row
+	//- 	div.col-sm-8.col-sm-offset-2
+	//- 		table.col-xs-12
+	//- 			thead
+	//- 				tr
+	//- 					th.col-xs-6 Grand Prizes
+	//- 					th.col-xs-6 Donated By
+	//- 			tbody
+	//- 				tr
+	//- 					td $1000 Travel Voucher
+	//- 					td Archie & Mary Ballesteros, Honesto & Lita Rutaquio, and Lea Larion
+	//- 				tr
+	//- 					td TV
+	//- 					td 
+	//- 				tr
+	//- 					td GoPro Hero 5 
+	//- 					td Herschel Gutierrez and Joanna Reyes
+	//- 				tr
+	//- 					td Apple Package 
+	//- 					td Harvey and Sheri Gutierrez
+	//- 				tr
+	//- 					td 
+	//- 					td Axalan Family
+
+	//- 		table.col-xs-12
+	//- 			thead
+	//- 				tr
+	//- 					th.col-xs-6 Regular Prizes
+	//- 					th.col-xs-6 Donated By
+	//- 			tbody
+	//- 				tr
+	//- 					td Yoli Package
+	//- 					td 
+	//- 				tr
+	//- 					td Beauty Package (Eyelashes, Perfume, Facial, Makeup, Mani/Pedi)
+	//- 					td 
+	//- 				tr
+	//- 					td Lottery Tree
+	//- 					td 
+	//- 				tr
+	//- 					td Alcohol Package + Shotglass Roulette Wheel
+	//- 					td Joyce Axalan and Raymond Dabu
+	//- 				tr
+	//- 					td Kitchen Aid Mixer
+	//- 					td Katrina Galapon, Alvin Albay, and Sherlyn & Jeremy Watson
+	//- 				tr
+	//- 					td Fitness Package
+	//- 					td Christine Capucion, Nadine Maranan, and Gayle Baybay
+	//- 				tr
+	//- 					td Date Night Package
+	//- 					td 
+	//- 				tr
+	//- 					td His and Hers Package (Kate Spade Bag and Waller)
+	//- 					td Harvey and Sheri Gutierrez
+	//- 				tr
+	//- 					td Jets Package
+	//- 					td 
+	//- 				tr
+	//- 					td Basketball Package (Hoop and Ball)
+	//- 					td Mark Capucion, Christian Lozano, Shannon Maranan, John Raven 
+	//- 				tr
+	//- 					td Car Package (Oil Change, Car Wash, Car Fresheners, Etc...)
+	//- 					td 
+	//- 				tr
+	//- 					td Mini-Fridge with Beer
+	//- 					td 
+	//- 				tr
+	//- 					td Mountain Bike
+	//- 					td 
+	//- 				tr
+	//- 					td Lawn Mower
+	//- 					td 
+	//- 				tr
+	//- 					td Camping Package
+	//- 					td Harvey and Sheri Gutierrez
 
 

@@ -34,7 +34,7 @@
       z-index: 5; }
     .polaroids li span {
       color: black;
-      font-family: 'Permanent Marker', cursive;
+      font-family: 'Josefin Sans', Helvetica, sans-serif;
       display: block;
       word-wrap: break-word; }
     .polaroids li img {
@@ -46,7 +46,7 @@
     -webkit-transform: none;
     -moz-transform: none;
     transform: none;
-    /*padding: 5px 5px 60px 5px;*/
+    padding: 0 0 60px 0;
     height: 320px;
     margin: 5px; }
     .polaroids.polaroids-grid li:hover {
@@ -54,9 +54,10 @@
       -moz-transform: none;
       transform: none; }
     .polaroids.polaroids-grid li span {
-      font-size: 18px; }
+      font-size: 18px;
+      max-width: 250px; }
       .polaroids.polaroids-grid li span.donated-by {
-        font-size: 11px; }
+        font-size: 14px; }
     .polaroids.polaroids-grid li img {
       display: block;
       margin-bottom: 5px; }
@@ -65,7 +66,7 @@
 @media (max-width: 768px) {
   .polaroids li {
     height: 200px;
-    max-width: 160px; }
+    max-width: 150px; }
     .polaroids li:hover {
       -webkit-transform: none;
       -moz-transform: none;

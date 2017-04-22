@@ -54,7 +54,7 @@
 		span
 		{
 			color: black;
-			font-family: 'Permanent Marker', cursive;
+			font-family: 'Josefin Sans', Helvetica, sans-serif;
 			display: block;
 			word-wrap: break-word;
 		}
@@ -80,7 +80,7 @@
 			-moz-transform: none;
 			transform: none;
 
-			/*padding: 5px 5px 60px 5px;*/
+			padding: 0 0 60px 0;
 			height: 320px;
 			margin: 5px;
 
@@ -94,10 +94,11 @@
 			span
 			{
 				font-size: 18px;
+				max-width: 250px;
 
 				&.donated-by
 				{
-					font-size: 11px;
+					font-size: 14px;
 				}
 			}
 
@@ -123,7 +124,7 @@
 		li
 		{
 			height: 200px;
-			max-width: 160px;
+			max-width: 150px;
 
 			&:hover
 			{

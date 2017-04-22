@@ -2,6 +2,7 @@ extends layout
 
 block styles
 	link(type='text/css' rel='stylesheet' href='/stylesheets/wedding-social.css')
+	link(type='text/css' rel='stylesheet' href='/stylesheets/headshot.css')
 	link(type='text/css' rel='stylesheet' href='/stylesheets/polaroids.css')
 
 block content
@@ -20,41 +21,72 @@ block content
 			p Join us in celebrating as we, Herald and Joanne, will be getting married! Come out for an evening filled with all of your favourite Filipino dishes, drinks, awesome prizes!
 			p For all of you basketball players, there will be a basketball hoop to test your shooting. Can you shoot the most in 60 seconds to claim the prize?
 
-			h2.subheading.center <span>T</span>ickets
+			h2.center <span>T</span>ickets
 			p Interested in coming? Regular tickets are $10. Can't make it but still want to support? We also have support tickets for $10.
 			p For tickets feel free to text Herald or Joanne. Tickets can also be purchased from members of our wonderful wedding party, family, and close friends:
-			div.col-xs-offset-1
-				ul.col-md-4
-					li Alvin Albay
-					li Archie Ballesteros
-					li Benn Javate
-					li Christian Lozano
-					li Christine Capucion
-					li Gayle Baybay
-					li Harvey Gutierrez
-					li Herschel Gutierrez
-				ul.col-md-4
-					li Jekko Axalan
-					li Jessica Axalan					
-					li Jezel Axalan
-					li John Raven 
-					li Jon Gutierrez
-					li Joyce Axalan
-					li Katrina Galapon
-					li Mark Capucion
-				ul.col-md-4
-					li Marlon Axalan
-					li Mary Ballesteros
-					li Monica Axalan
-					li Nadine Maranan
-					li Raymond Dabu
-					li Rhegie Axalan
-					li Shannon Maranan
-					li Sherlyn Watson
-					li Zeeron Maranan
+
+			div.row
+				div.col-md-12.center
+					ul.headshot
+						li <img src="/images/entourage/Alvin.jpg" /><span>Alvin</span>
+						li <img src="/images/entourage/Archie.jpg" /><span>Archie</span>
+						li <img src="/images/entourage/Benn.jpg" /><span>Bennet</span>
+						li <img src="/images/entourage/Christian.jpg" /><span>Christian</span>
+						li <img src="/images/entourage/Christine.jpg" /><span>Christine</span>
+						li <img src="/images/entourage/Gayle.jpg" /><span>Gayle</span>
+						li <img src="/images/entourage/Harvey.jpg" /><span>Harvey</span>
+						li <img src="/images/entourage/Herschel.jpg" /><span>Herschel</span>
+						li <img src="/images/entourage/Jekko.jpg" /><span>Jekko</span>
+						li <img src="/images/entourage/Jessica.jpg" /><span>Jessica</span>
+						li <img src="/images/entourage/Jezel.jpg" /><span>Jezel</span>
+						li <img src="/images/entourage/John-Raven.jpg" /><span>John</span>
+						li <img src="/images/entourage/Jon.jpg" /><span>Jon</span>
+						li <img src="/images/entourage/Joyce.jpg" /><span>Joyce</span>
+						li <img src="/images/entourage/Katrina.jpg" /><span>Katrina</span>
+						li <img src="/images/entourage/Mark.jpg" /><span>Mark</span>
+						li <img src="/images/entourage/Marlon.jpg" /><span>Marlon</span>
+						li <img src="/images/entourage/Mary.jpg" /><span>Mary</span>
+						li <img src="/images/entourage/Monica.jpg" /><span>Monica</span>
+						li <img src="/images/entourage/Nadine.jpg" /><span>Nadine</span>
+						li <img src="/images/entourage/Raymond.jpg" /><span>Raymond</span>
+						li <img src="/images/entourage/Rhegie.jpg" /><span>Rhegie</span>
+						li <img src="/images/entourage/Shannon.jpg" /><span>Shannon</span>
+						li <img src="/images/entourage/Sherlyn.jpg" /><span>Sherlyn</span>
+						li <img src="/images/entourage/Zeeron.jpg" /><span>Zeeron</span>		
+
+			//- div.col-xs-offset-1
+			//- 	ul.col-md-4
+			//- 		li Alvin Albay
+			//- 		li Archie Ballesteros
+			//- 		li Benn Javate
+			//- 		li Christian Lozano
+			//- 		li Christine Capucion
+			//- 		li Gayle Baybay
+			//- 		li Harvey Gutierrez
+			//- 		li Herschel Gutierrez
+			//- 	ul.col-md-4
+			//- 		li Jekko Axalan
+			//- 		li Jessica Axalan					
+			//- 		li Jezel Axalan
+			//- 		li John Raven 
+			//- 		li Jon Gutierrez
+			//- 		li Joyce Axalan
+			//- 		li Katrina Galapon
+			//- 		li Mark Capucion
+			//- 	ul.col-md-4
+			//- 		li Marlon Axalan
+			//- 		li Mary Ballesteros
+			//- 		li Monica Axalan
+			//- 		li Nadine Maranan
+			//- 		li Raymond Dabu
+			//- 		li Rhegie Axalan
+			//- 		li Shannon Maranan
+			//- 		li Sherlyn Watson
+			//- 		li Zeeron Maranan
+
 			h3.thank-you.center For those who have already purchased tickets, thank you so much for your love and support!
 
-			h2.subheading.center <span>D</span>ress <span>U</span>p!
+			h2.center <span>D</span>ress <span>U</span>p!
 			p Our wedding social will be Halloween themed! Buy or hand-make the best halloween costume to be the best dressed at the social. We're giving awards for:
 			div.col-xs-offset-1
 				ul.col-md-12
@@ -64,8 +96,7 @@ block content
 
 	div.row
 		div.col-sm-10.col-sm-offset-1
-			h2.subheading.center <span>P</span>rizes
-			h2.subheading.center <span>G</span>rand <span>P</span>rizes
+			h2.center <span>G</span>rand <span>P</span>rizes
 			ul.polaroids.polaroids-grid
 				li 
 					img(src='/images/prizes/travel-voucher.jpg')
@@ -90,7 +121,42 @@ block content
 
 	div.row
 		div.col-sm-12
-			h2.subheading.center <span>R</span>egular <span>P</span>rizes
+			h2.center <span>R</span>egular <span>P</span>rizes	
+			ul.polaroids.polaroids-grid
+				li 
+					img(src='/images/prizes/kylie-jenner-package.jpg')
+					span.prize Kylie Jenner Cosmetics
+					span.donated-by Herald and Joanne
+				li 
+					img(src='/images/prizes/ilash-boutique.jpg')
+					span.prize $400 iLash Boutique 
+					span.donated-by Mary Ballesteros
+				li 
+					img(src='/images/prizes/bbq-grill.jpg')
+					span.prize BBQ Grill Package
+					span.donated-by Ronald and Cecille Maranan
+				li 
+					img(src='/images/prizes/alcohol-package.jpg')
+					span.prize Alcohol Package
+					span.donated-by Joyce Axalan and Raymond Dabu	
+				li 
+					img(src='/images/prizes/basketball-package.jpg')
+					span.prize Basketball Package
+					span.donated-by Mark Capucion, Christian Lozano, Shannon Maranan, John Raven Andrin
+				li 
+					img(src='/images/prizes/camping-package.jpg')
+					span.prize Camping Package
+					span.donated-by Harvey and Sheri Gutierrez
+				li 
+					img(src='/images/prizes/fitness-package.jpg')
+					span.prize Fitness Package
+					span.donated-by Christine Capucion, Nadine Maranan, and Gayle Baybay
+				li 
+					img(src='/images/prizes/kitchen-aid.jpg')
+					span.prize Kitchen Aid Mixer
+					span.donated-by Katrina Galapon, Alvin Albay, and Sherlyn & Jeremy Watson
+
+			h2.subheading.center Possible Prizes
 			ul.polaroids.polaroids-grid
 				li 
 					img(src='/images/prizes/yoli.jpg')
@@ -105,18 +171,6 @@ block content
 					span.prize Lottery Tree
 					span.donated-by 
 				li 
-					img(src='/images/prizes/alcohol-package.jpg')
-					span.prize Alcohol Package
-					span.donated-by Joyce Axalan and Raymond Dabu
-				li 
-					img(src='/images/prizes/kitchen-aid.jpg')
-					span.prize Kitchen Aid Mixer
-					span.donated-by Katrina Galapon, Alvin Albay, and Sherlyn & Jeremy Watson
-				li 
-					img(src='/images/prizes/fitness-package.jpg')
-					span.prize Fitness Package
-					span.donated-by Christine Capucion, Nadine Maranan, and Gayle Baybay
-				li 
 					img(src='/images/prizes/date-night-package.jpg')
 					span.prize Date Night Package
 					span.donated-by 
@@ -128,10 +182,6 @@ block content
 					img(src='/images/prizes/jets-package.jpg')
 					span.prize Jets Package
 					span.donated-by 
-				li 
-					img(src='/images/prizes/basketball-package.jpg')
-					span.prize Basketball Package
-					span.donated-by Mark Capucion, Christian Lozano, Shannon Maranan, John Raven 
 				li 
 					img(src='/images/prizes/car-package.jpg')
 					span.prize Car Package 
@@ -148,90 +198,8 @@ block content
 					img(src='/images/prizes/lawn-mower.jpg')
 					span.prize Lawn Mower
 					span.donated-by 
-				li 
-					img(src='/images/prizes/camping-package.jpg')
-					span.prize Camping Package
-					span.donated-by Harvey and Sheri Gutierrez
 				//- li 
 				//- 	img(src='/images/prizes/coming-soon.jpg')
 				//- 	span.prize 
 				//- 	span.donated-by 
-
-
-	//- div.row
-	//- 	div.col-sm-8.col-sm-offset-2
-	//- 		table.col-xs-12
-	//- 			thead
-	//- 				tr
-	//- 					th.col-xs-6 Grand Prizes
-	//- 					th.col-xs-6 Donated By
-	//- 			tbody
-	//- 				tr
-	//- 					td $1000 Travel Voucher
-	//- 					td Archie & Mary Ballesteros, Honesto & Lita Rutaquio, and Lea Larion
-	//- 				tr
-	//- 					td TV
-	//- 					td 
-	//- 				tr
-	//- 					td GoPro Hero 5 
-	//- 					td Herschel Gutierrez and Joanna Reyes
-	//- 				tr
-	//- 					td Apple Package 
-	//- 					td Harvey and Sheri Gutierrez
-	//- 				tr
-	//- 					td 
-	//- 					td Axalan Family
-
-	//- 		table.col-xs-12
-	//- 			thead
-	//- 				tr
-	//- 					th.col-xs-6 Regular Prizes
-	//- 					th.col-xs-6 Donated By
-	//- 			tbody
-	//- 				tr
-	//- 					td Yoli Package
-	//- 					td 
-	//- 				tr
-	//- 					td Beauty Package (Eyelashes, Perfume, Facial, Makeup, Mani/Pedi)
-	//- 					td 
-	//- 				tr
-	//- 					td Lottery Tree
-	//- 					td 
-	//- 				tr
-	//- 					td Alcohol Package + Shotglass Roulette Wheel
-	//- 					td Joyce Axalan and Raymond Dabu
-	//- 				tr
-	//- 					td Kitchen Aid Mixer
-	//- 					td Katrina Galapon, Alvin Albay, and Sherlyn & Jeremy Watson
-	//- 				tr
-	//- 					td Fitness Package
-	//- 					td Christine Capucion, Nadine Maranan, and Gayle Baybay
-	//- 				tr
-	//- 					td Date Night Package
-	//- 					td 
-	//- 				tr
-	//- 					td His and Hers Package (Kate Spade Bag and Waller)
-	//- 					td Harvey and Sheri Gutierrez
-	//- 				tr
-	//- 					td Jets Package
-	//- 					td 
-	//- 				tr
-	//- 					td Basketball Package (Hoop and Ball)
-	//- 					td Mark Capucion, Christian Lozano, Shannon Maranan, John Raven 
-	//- 				tr
-	//- 					td Car Package (Oil Change, Car Wash, Car Fresheners, Etc...)
-	//- 					td 
-	//- 				tr
-	//- 					td Mini-Fridge with Beer
-	//- 					td 
-	//- 				tr
-	//- 					td Mountain Bike
-	//- 					td 
-	//- 				tr
-	//- 					td Lawn Mower
-	//- 					td 
-	//- 				tr
-	//- 					td Camping Package
-	//- 					td Harvey and Sheri Gutierrez
-
 

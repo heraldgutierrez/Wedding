@@ -8,7 +8,7 @@ app.controller('homeController', ['$scope', function($scope) {
 	var currentDateSeconds = currentDate.getTime() / 1000;
 
 	// Wedding Date: June 30, 2018
-	self.weddingDate  = new Date('6/30/2018 11:00 UTC-05:00');
+	self.weddingDate  = new Date('6/30/2018 13:00 UTC-05:00');
 	var weddingDateSeconds = self.weddingDate.getTime() / 1000;
 
 	// Calculate the difference in seconds between the future and current date
